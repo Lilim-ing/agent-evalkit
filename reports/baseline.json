@@ -1,0 +1,491 @@
+{
+  "suite": "toy-agent-quality",
+  "started_at": "2026-10-21T11:03:30+08:00",
+  "finished_at": "2026-10-21T11:03:30+08:00",
+  "adapter": "examples.toy_agent:agent",
+  "results": [
+    {
+      "case_id": "repurchase_diagnosis",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "tool_order",
+          "passed": true,
+          "detail": "expected ['query_cohort', 'decompose_metric'], got ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "0.131 vs 0.131 ±0.002"
+        },
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.004000 <= $0.01"
+        },
+        {
+          "type": "llm_judge",
+          "passed": true,
+          "detail": "actionability=5 (min 4)"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '复购'"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "claims=2"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "repurchase_diagnosis",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "tool_order",
+          "passed": true,
+          "detail": "expected ['query_cohort', 'decompose_metric'], got ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "0.131 vs 0.131 ±0.002"
+        },
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.004000 <= $0.01"
+        },
+        {
+          "type": "llm_judge",
+          "passed": true,
+          "detail": "actionability=5 (min 4)"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '复购'"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "claims=2"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "repurchase_diagnosis",
+      "run": 3,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "tool_order",
+          "passed": true,
+          "detail": "expected ['query_cohort', 'decompose_metric'], got ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "0.131 vs 0.131 ±0.002"
+        },
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.004000 <= $0.01"
+        },
+        {
+          "type": "llm_judge",
+          "passed": true,
+          "detail": "actionability=5 (min 4)"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '复购'"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "claims=2"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "churn_rise",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "0.182 vs 0.182 ±0.001"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '沉睡'"
+        },
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "max_latency_ms",
+          "passed": true,
+          "detail": "910ms <= 1500ms"
+        }
+      ],
+      "cost_usd": 0.005,
+      "cost_source": "simulated",
+      "latency_ms": 910.0,
+      "output_digest": "37b01aac16d5"
+    },
+    {
+      "case_id": "churn_rise",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "0.182 vs 0.182 ±0.001"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '沉睡'"
+        },
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "max_latency_ms",
+          "passed": true,
+          "detail": "910ms <= 1500ms"
+        }
+      ],
+      "cost_usd": 0.005,
+      "cost_source": "simulated",
+      "latency_ms": 910.0,
+      "output_digest": "37b01aac16d5"
+    },
+    {
+      "case_id": "aov_and_upt",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "287.0 vs 287.0 ±1.0"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "1.42 vs 1.42 ±0.01"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '连带'"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_metric', 'decompose_metric']"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 760.0,
+      "output_digest": "69d33adf3465"
+    },
+    {
+      "case_id": "aov_and_upt",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "287.0 vs 287.0 ±1.0"
+        },
+        {
+          "type": "numeric_close",
+          "passed": true,
+          "detail": "1.42 vs 1.42 ±0.01"
+        },
+        {
+          "type": "contains",
+          "passed": true,
+          "detail": "looking for '连带'"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_metric', 'decompose_metric']"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 760.0,
+      "output_digest": "69d33adf3465"
+    },
+    {
+      "case_id": "json_shape",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "json_has",
+          "passed": true,
+          "detail": "missing keys: []"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "regex_format",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "regex",
+          "passed": true,
+          "detail": "pattern '客单价\\\\s*\\\\d+'"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 760.0,
+      "output_digest": "69d33adf3465"
+    },
+    {
+      "case_id": "forbidden_claim",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "not_contains",
+          "passed": true,
+          "detail": "forbidden '保证'"
+        },
+        {
+          "type": "not_contains",
+          "passed": true,
+          "detail": "forbidden '100%'"
+        },
+        {
+          "type": "not_contains",
+          "passed": true,
+          "detail": "forbidden '绝对'"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "no_forbidden_tool",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_not_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort', 'decompose_metric']"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 820.0,
+      "output_digest": "fae3d7e4b937"
+    },
+    {
+      "case_id": "cost_ceiling",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.005000 <= $0.006"
+        }
+      ],
+      "cost_usd": 0.005,
+      "cost_source": "simulated",
+      "latency_ms": 910.0,
+      "output_digest": "37b01aac16d5"
+    }
+  ],
+  "summaries": [
+    {
+      "case_id": "aov_and_upt",
+      "runs": 2,
+      "passes": 2,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 760.0,
+      "failures": []
+    },
+    {
+      "case_id": "churn_rise",
+      "runs": 2,
+      "passes": 2,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.005,
+      "mean_latency_ms": 910.0,
+      "failures": []
+    },
+    {
+      "case_id": "cost_ceiling",
+      "runs": 1,
+      "passes": 1,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.005,
+      "mean_latency_ms": 910.0,
+      "failures": []
+    },
+    {
+      "case_id": "forbidden_claim",
+      "runs": 1,
+      "passes": 1,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 820.0,
+      "failures": []
+    },
+    {
+      "case_id": "json_shape",
+      "runs": 1,
+      "passes": 1,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 820.0,
+      "failures": []
+    },
+    {
+      "case_id": "no_forbidden_tool",
+      "runs": 1,
+      "passes": 1,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 820.0,
+      "failures": []
+    },
+    {
+      "case_id": "regex_format",
+      "runs": 1,
+      "passes": 1,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 760.0,
+      "failures": []
+    },
+    {
+      "case_id": "repurchase_diagnosis",
+      "runs": 3,
+      "passes": 3,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 820.0,
+      "failures": []
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_ci": [
+    1.0,
+    1.0
+  ],
+  "total_cost_usd": 0.051,
+  "cost_basis": "simulated",
+  "mean_latency_ms": 827.5,
+  "flaky_cases": 0
+}

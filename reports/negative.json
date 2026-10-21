@@ -1,0 +1,157 @@
+{
+  "suite": "toy-agent-negative-controls",
+  "started_at": "2026-10-21T11:03:29+08:00",
+  "finished_at": "2026-10-21T11:03:29+08:00",
+  "adapter": "examples.toy_agent:agent",
+  "results": [
+    {
+      "case_id": "missing_evidence",
+      "run": 1,
+      "passed": false,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": false,
+          "detail": "1/2 = 0.50"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": false,
+          "detail": "orphans: ['c2']"
+        }
+      ],
+      "cost_usd": 0.004,
+      "cost_source": "simulated",
+      "latency_ms": 800.0,
+      "output_digest": "355b573d3956"
+    },
+    {
+      "case_id": "flaky_tool",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort']"
+        }
+      ],
+      "cost_usd": 0.003,
+      "cost_source": "simulated",
+      "latency_ms": 640.0,
+      "output_digest": "c48aa84b84c5"
+    },
+    {
+      "case_id": "flaky_tool",
+      "run": 2,
+      "passed": false,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": false,
+          "detail": "tools used: ['query_other']"
+        }
+      ],
+      "cost_usd": 0.003,
+      "cost_source": "simulated",
+      "latency_ms": 640.0,
+      "output_digest": "c48aa84b84c5"
+    },
+    {
+      "case_id": "flaky_tool",
+      "run": 3,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['query_cohort']"
+        }
+      ],
+      "cost_usd": 0.003,
+      "cost_source": "simulated",
+      "latency_ms": 640.0,
+      "output_digest": "c48aa84b84c5"
+    },
+    {
+      "case_id": "flaky_tool",
+      "run": 4,
+      "passed": false,
+      "assertions": [
+        {
+          "type": "tool_called",
+          "passed": false,
+          "detail": "tools used: ['query_other']"
+        }
+      ],
+      "cost_usd": 0.003,
+      "cost_source": "simulated",
+      "latency_ms": 640.0,
+      "output_digest": "c48aa84b84c5"
+    },
+    {
+      "case_id": "adapter_error",
+      "run": 1,
+      "passed": false,
+      "assertions": [
+        {
+          "type": "adapter",
+          "passed": false,
+          "detail": "RuntimeError: simulated adapter failure"
+        }
+      ],
+      "cost_usd": 0.0,
+      "cost_source": "none",
+      "latency_ms": 0.0,
+      "output_digest": ""
+    }
+  ],
+  "summaries": [
+    {
+      "case_id": "adapter_error",
+      "runs": 1,
+      "passes": 0,
+      "pass_rate": 0.0,
+      "flaky": false,
+      "mean_cost_usd": 0.0,
+      "mean_latency_ms": 0.0,
+      "failures": [
+        "adapter"
+      ]
+    },
+    {
+      "case_id": "flaky_tool",
+      "runs": 4,
+      "passes": 2,
+      "pass_rate": 0.5,
+      "flaky": true,
+      "mean_cost_usd": 0.003,
+      "mean_latency_ms": 640.0,
+      "failures": [
+        "tool_called"
+      ]
+    },
+    {
+      "case_id": "missing_evidence",
+      "runs": 1,
+      "passes": 0,
+      "pass_rate": 0.0,
+      "flaky": false,
+      "mean_cost_usd": 0.004,
+      "mean_latency_ms": 800.0,
+      "failures": [
+        "evidence_coverage",
+        "no_orphan_claims"
+      ]
+    }
+  ],
+  "pass_rate": 0.3333,
+  "pass_ci": [
+    0.0,
+    0.6667
+  ],
+  "total_cost_usd": 0.016,
+  "cost_basis": "simulated",
+  "mean_latency_ms": 560.0,
+  "flaky_cases": 1
+}

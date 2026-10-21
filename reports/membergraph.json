@@ -1,0 +1,248 @@
+{
+  "suite": "membergraph-dogfood",
+  "started_at": "2026-10-21T09:57:58+08:00",
+  "finished_at": "2026-10-21T09:58:00+08:00",
+  "adapter": "examples.membergraph_eval:agent",
+  "results": [
+    {
+      "case_id": "repurchase_plan",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['compute_metric', 'compute_metric', 'compute_metric', 'compute_metric']"
+        },
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.001440 <= $0.01"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "degraded=False"
+        }
+      ],
+      "cost_usd": 0.00144,
+      "latency_ms": 360.5,
+      "output_digest": "819a90f31ebc"
+    },
+    {
+      "case_id": "repurchase_plan",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['compute_metric', 'compute_metric', 'compute_metric', 'compute_metric']"
+        },
+        {
+          "type": "max_cost",
+          "passed": true,
+          "detail": "$0.001440 <= $0.01"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "degraded=False"
+        }
+      ],
+      "cost_usd": 0.00144,
+      "latency_ms": 208.1,
+      "output_digest": "819a90f31ebc"
+    },
+    {
+      "case_id": "churn_plan",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['compute_metric', 'compute_metric', 'compute_metric']"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        }
+      ],
+      "cost_usd": 0.00126,
+      "latency_ms": 198.8,
+      "output_digest": "b2f0599f3884"
+    },
+    {
+      "case_id": "churn_plan",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "2/2 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "tool_called",
+          "passed": true,
+          "detail": "tools used: ['compute_metric', 'compute_metric', 'compute_metric']"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        }
+      ],
+      "cost_usd": 0.00126,
+      "latency_ms": 169.9,
+      "output_digest": "b2f0599f3884"
+    },
+    {
+      "case_id": "aov_upt_plan",
+      "run": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "3/3 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "max_latency_ms",
+          "passed": true,
+          "detail": "196ms <= 5000ms"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        }
+      ],
+      "cost_usd": 0.00126,
+      "latency_ms": 195.5,
+      "output_digest": "9400748e75db"
+    },
+    {
+      "case_id": "aov_upt_plan",
+      "run": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "type": "evidence_coverage",
+          "passed": true,
+          "detail": "3/3 = 1.00"
+        },
+        {
+          "type": "no_orphan_claims",
+          "passed": true,
+          "detail": "orphans: []"
+        },
+        {
+          "type": "max_latency_ms",
+          "passed": true,
+          "detail": "167ms <= 5000ms"
+        },
+        {
+          "type": "custom",
+          "passed": true,
+          "detail": "actions=2, complete=True"
+        }
+      ],
+      "cost_usd": 0.00126,
+      "latency_ms": 167.3,
+      "output_digest": "9400748e75db"
+    }
+  ],
+  "summaries": [
+    {
+      "case_id": "aov_upt_plan",
+      "runs": 2,
+      "passes": 2,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.00126,
+      "mean_latency_ms": 181.4,
+      "failures": []
+    },
+    {
+      "case_id": "churn_plan",
+      "runs": 2,
+      "passes": 2,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.00126,
+      "mean_latency_ms": 184.4,
+      "failures": []
+    },
+    {
+      "case_id": "repurchase_plan",
+      "runs": 2,
+      "passes": 2,
+      "pass_rate": 1.0,
+      "flaky": false,
+      "mean_cost_usd": 0.00144,
+      "mean_latency_ms": 284.3,
+      "failures": []
+    }
+  ],
+  "pass_rate": 1.0,
+  "pass_ci": [
+    1.0,
+    1.0
+  ],
+  "total_cost_usd": 0.00792,
+  "mean_latency_ms": 216.7,
+  "flaky_cases": 0
+}

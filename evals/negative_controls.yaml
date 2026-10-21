@@ -1,0 +1,20 @@
+# 负向对照：框架必须能识别出这三类问题
+# 期望：missing_evidence 失败、flaky_tool 不稳定、adapter_error 失败
+suite: toy-agent-negative-controls
+cases:
+  - id: missing_evidence
+    input: "缺少证据的结论"
+    assertions:
+      - {type: evidence_coverage, min: 0.9}
+      - {type: no_orphan_claims}
+
+  - id: flaky_tool
+    input: "flaky 工具调用"
+    repeat: 4
+    assertions:
+      - {type: tool_called, tool: query_cohort}
+
+  - id: adapter_error
+    input: "让它炸"
+    assertions:
+      - {type: contains, value: "x"}

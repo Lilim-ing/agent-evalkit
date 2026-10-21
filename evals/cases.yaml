@@ -1,0 +1,63 @@
+# 主套件：8 条正向用例，全部应通过
+suite: toy-agent-quality
+cases:
+  - id: repurchase_diagnosis
+    input: "9月复购率为什么下滑"
+    repeat: 3
+    tags: [core]
+    assertions:
+      - {type: tool_called, tool: query_cohort}
+      - {type: tool_order, tools: [query_cohort, decompose_metric]}
+      - {type: evidence_coverage, min: 0.9}
+      - {type: no_orphan_claims}
+      - {type: numeric_close, path: "$.kpi.repurchase_rate", value: 0.131, tol: 0.002}
+      - {type: max_cost, value: 0.01}
+      - {type: llm_judge, rubric: actionability, min_score: 4}
+      - {type: contains, value: "复购"}
+      - {type: custom, path: "examples.toy_agent:has_two_claims"}
+
+  - id: churn_rise
+    input: "近半年沉睡会员上升，怎么召回"
+    repeat: 2
+    assertions:
+      - {type: tool_called, tool: query_cohort}
+      - {type: numeric_close, path: "$.kpi.churn_rate", value: 0.182, tol: 0.001}
+      - {type: contains, value: "沉睡"}
+      - {type: evidence_coverage, min: 1.0}
+      - {type: max_latency_ms, value: 1500}
+
+  - id: aov_and_upt
+    input: "客单价和连带率怎么样"
+    repeat: 2
+    assertions:
+      - {type: numeric_close, path: "$.kpi.aov", value: 287, tol: 1}
+      - {type: numeric_close, path: "$.kpi.upt", value: 1.42, tol: 0.01}
+      - {type: contains, value: "连带"}
+      - {type: tool_called, tool: query_metric}
+
+  - id: json_shape
+    input: "9月复购率为什么下滑"
+    assertions:
+      - {type: json_has, keys: [claims, evidence_ids, kpi]}
+
+  - id: regex_format
+    input: "客单价和连带率怎么样"
+    assertions:
+      - {type: regex, pattern: "客单价\\s*\\d+"}
+
+  - id: forbidden_claim
+    input: "9月复购率为什么下滑"
+    assertions:
+      - {type: not_contains, value: "保证"}
+      - {type: not_contains, value: "100%"}
+      - {type: not_contains, value: "绝对"}
+
+  - id: no_forbidden_tool
+    input: "9月复购率为什么下滑"
+    assertions:
+      - {type: tool_not_called, tool: drop_table}
+
+  - id: cost_ceiling
+    input: "近半年沉睡会员上升，怎么召回"
+    assertions:
+      - {type: max_cost, value: 0.006}

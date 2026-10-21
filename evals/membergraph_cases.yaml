@@ -1,0 +1,32 @@
+# 跨仓库联调：用 evalkit 评测 membergraph
+# 需要 membergraph 与 agent-evalkit 并排 checkout
+suite: membergraph-dogfood
+cases:
+  - id: repurchase_plan
+    input: "9月复购率环比下滑，给出一个30天挽回方案"
+    repeat: 2
+    assertions:
+      - {type: evidence_coverage, min: 0.9}
+      - {type: no_orphan_claims}
+      - {type: tool_called, tool: compute_metric}
+      - {type: max_cost, value: 0.01}
+      - {type: custom, path: "examples.membergraph_eval:has_actions"}
+      - {type: custom, path: "examples.membergraph_eval:not_degraded"}
+
+  - id: churn_plan
+    input: "近半年沉睡会员占比上升，如何召回"
+    repeat: 2
+    assertions:
+      - {type: evidence_coverage, min: 0.9}
+      - {type: no_orphan_claims}
+      - {type: tool_called, tool: compute_metric}
+      - {type: custom, path: "examples.membergraph_eval:has_actions"}
+
+  - id: aov_upt_plan
+    input: "客单价增长但连带率下降，问题出在哪"
+    repeat: 2
+    assertions:
+      - {type: evidence_coverage, min: 0.9}
+      - {type: no_orphan_claims}
+      - {type: max_latency_ms, value: 5000}
+      - {type: custom, path: "examples.membergraph_eval:has_actions"}
