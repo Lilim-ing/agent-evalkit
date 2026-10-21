@@ -192,7 +192,7 @@ HTTP 与 CLI 适配器见 `src/evalkit/adapters.py`。
 
 ### 没有绑定可观测平台
 
-LangSmith / LangFuse 解决"看"的问题，这个项目解决"判"的问题，而且要能进 CI 卡住回归。两者可以并存：trace 格式是普通 JSON，导出到任何平台都行。
+LangSmith / LangFuse 用来看运行过程，这个项目用来判断结果能不能过，并且要能进 CI 卡住回归。两者可以并存：trace 格式是普通 JSON，导出到任何平台都行。
 
 ### 自带的 judge 是启发式的
 
